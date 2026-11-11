@@ -202,7 +202,7 @@ function Actions({ s, c, nameOf, onChanged }: { s: SettlementView; c: CircleView
       {blocked && (
         <Banner tone="danger" title="That didn’t go through">
           {blocked}{' '}
-          {state === ‘RECONCILIATION_PENDING’ && <Link className="link" href={settlementReconciliationHref(s.id)}>See what doesn’t match</Link>}
+          {state === 'RECONCILIATION_PENDING' && <Link className="link" href={settlementReconciliationHref(s.id)}>See what doesn’t match</Link>}
         </Banner>
       )}
       <Modal open={!!decision} title={decision === 'APPROVE' ? 'Approve settlement' : 'Reject settlement'} onClose={() => setDecision(null)}
